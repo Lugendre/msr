@@ -1,0 +1,10 @@
+{
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.ignore": [
+    "cargo clippy"
+  ],
+  "rust-analyzer.lens.references.method.enable": true,
+  "rust-analyzer.lens.references.enumVariant.enable": true,
+  "rust-analyzer.lens.references.adt.enable": true,
+  "rust-analyzer.lens.references.trait.enable": true
+}

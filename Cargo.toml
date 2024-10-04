@@ -1,0 +1,26 @@
+[package]
+name = "msr"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.89"
+async-trait = "0.1.83"
+bytes = "1.7.2"
+derive_more = { version = "1.0.0", features = ["full"] }
+deriving_via = "1.6.3"
+futures = "0.3.30"
+indexmap = "2.6.0"
+itertools = "0.13.0"
+mockall = "0.13.0"
+reqwest = { version = "0.12.8", features = ["native-tls-alpn", "gzip", "json"] }
+sea-orm = { version = "1.0.1", features = ["sqlx-sqlite", "runtime-tokio-native-tls", "macros", "mock"] }
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+strum = { version = "0.26.3", features = ["derive"] }
+thiserror = "1.0.64"
+tokio = { version = "1.40.0", features = ["full"] }
+url = { version = "2.5.2", features = ["serde"] }
+
+[patch.crates-io]
+sqlformat = { git = "https://github.com/shssoichiro/sqlformat-rs", tag = "v0.2.6" }
