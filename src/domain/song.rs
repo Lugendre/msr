@@ -3,7 +3,7 @@ use deriving_via::DerivingVia;
 use std::borrow::Cow;
 use std::fmt::Debug;
 use std::path::PathBuf;
-use strum::EnumString;
+use strum::{Display, EnumString};
 use crate::errors::domain::DomainError;
 
 // TODO: commonに分離
@@ -60,11 +60,14 @@ impl AlbumId {
     }
 }
 
-#[derive(Debug, Default, Copy, Clone, Hash, PartialEq, Eq, EnumString)]
+#[derive(Debug, Display, Default, Copy, Clone, Hash, PartialEq, Eq, EnumString)]
 pub enum AudioFormat {
     #[default]
+    #[strum(serialize = "flac")]
     Flac,
+    #[strum(serialize = "mp3")]
     Mp3,
+    #[strum(serialize = "wav")]
     Wav,
 }
 

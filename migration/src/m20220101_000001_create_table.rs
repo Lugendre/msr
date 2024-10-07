@@ -12,7 +12,7 @@ impl MigrationTrait for Migration {
         conn.execute(Statement::from_string(
             DatabaseBackend::Sqlite,
             r"CREATE TABLE IF NOT EXISTS games (
-                     id INTEGER NOT NULL PRIMARY KEY,
+                     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                      created_at TEXT NOT NULL,
                      updated_at TEXT NOT NULL,
                      name TEXT NOT NULL,
@@ -25,7 +25,7 @@ impl MigrationTrait for Migration {
         conn.execute(Statement::from_string(
             DatabaseBackend::Sqlite,
             r"CREATE TABLE IF NOT EXISTS artists (
-                     id INTEGER NOT NULL PRIMARY KEY,
+                     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                      created_at TEXT NOT NULL,
                      updated_at TEXT NOT NULL,
                      name TEXT NOT NULL,
@@ -38,7 +38,7 @@ impl MigrationTrait for Migration {
         conn.execute(Statement::from_string(
             DatabaseBackend::Sqlite,
             r"CREATE TABLE IF NOT EXISTS audio_formats (
-                     id INTEGER NOT NULL PRIMARY KEY,
+                     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                      created_at TEXT NOT NULL,
                      updated_at TEXT NOT NULL,
                      format TEXT NOT NULL,
